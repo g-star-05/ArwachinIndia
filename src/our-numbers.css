@@ -1,0 +1,112 @@
+:root{
+  --overlay:rgba(170, 105, 35, 0.78); /* maroon tint over image */
+  --ink: hsl(0, 0%, 100%);
+  --ink-muted: #e5e7eb;
+  --cta: #ffffff;
+  --cta-ring: rgba(255,255,255,.4);
+}
+
+.nums{
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  isolation: isolate;
+  color: white;
+}
+
+.nums__overlay{
+  position: absolute; inset: 0;
+  background: var(--overlay);
+  z-index: 0;
+}
+
+.nums__wrap{
+  position: relative; z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: clamp(48px, 7vw, 96px) 18px;
+  text-align: center;
+}
+
+.nums__title{
+  font-weight: 800;
+  font-size: clamp(1.8rem, 2.5vw + 1rem, 3.4rem);
+  margin: 0 0 24px;
+  text-shadow: 0 2px 24px rgba(0,0,0,.35);
+}
+
+.nums__grid{
+  display: grid;
+  gap: clamp(18px, 2.5vw, 36px);
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  justify-items: center;
+  align-items: start;
+  margin: 10px auto clamp(22px, 3vw, 40px);
+}
+
+@media (min-width: 980px){
+  .nums__grid{ grid-template-columns: repeat(4, minmax(0,1fr)); }
+}
+
+.stat{
+  display: grid;
+  justify-items: center;
+  gap: 6px;
+  padding: clamp(8px, 1.2vw, 14px);
+}
+
+.stat__icon{
+  color: white;
+  opacity: .95;
+  filter: drop-shadow(0 6px 22px rgb(255, 255, 255));
+}
+
+.stat__value{
+  font-weight: 900;
+  line-height: 1;
+  font-size: clamp(1.8rem, 3.2vw + .6rem, 4rem);
+  letter-spacing: .5px;
+  text-shadow: 0 2px 22px rgb(255, 255, 255);
+}
+
+.stat__suffix{
+  font-weight: 800;
+  margin-left: 2px;
+  font-size: .7em;
+  opacity: .95;
+}
+
+.stat__label{
+  text-transform: uppercase;
+  letter-spacing: .15em;
+  font-weight: 700;
+  color: var(--ink-muted);
+  font-size: clamp(.75rem, .8vw + .55rem, .95rem);
+}
+
+/* CTA button similar to your sample */
+.nums__cta{
+  display: inline-block;
+  margin-top: clamp(10px, 2.4vw, 24px);
+  color: var(--cta);
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 16px;
+  padding: 16px 26px;
+  border: 2px solid var(--cta);
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(2px);
+  box-shadow: 0 8px 30px var(--cta-ring) inset, 0 6px 22px rgba(0,0,0,.25);
+  transition: transform .2s ease, box-shadow .2s ease, opacity .2s ease;
+}
+.nums__cta:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 10px 36px var(--cta-ring) inset, 0 10px 28px rgba(0,0,0,.35);
+  opacity: .95;
+}
+
+/* Spacing for small screens */
+@media (max-width: 640px){
+  .stat__icon svg{ width: 56px; height: 56px; }
+}

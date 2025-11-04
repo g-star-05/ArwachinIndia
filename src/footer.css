@@ -1,0 +1,85 @@
+:root{
+  --ft-bg: #0b1220;         /* deep navy */
+  --ft-fg: #e5e7eb;         /* light text */
+  --ft-dim:#94a3b8;         /* muted text */
+  --ft-accent:#60a5fa;      /* link hover */
+  --ring: rgba(255,255,255,.12);
+}
+
+.ft{
+  background: var(--ft-bg);
+  color: var(--ft-fg);
+  border-top: 1px solid rgba(255,255,255,.06);
+}
+
+.ft__wrap{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 18px;
+  display: grid;
+  gap: 28px;
+  grid-template-columns: 1fr;            /* mobile */
+}
+@media (min-width: 860px){
+  .ft__wrap{ grid-template-columns: 1.2fr .9fr 1.1fr; }
+}
+
+.ft__col{ display: grid; gap: 12px; }
+
+.ft__brand{
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 12px;
+  align-items: center;
+}
+.ft__logo{
+  width: 52px; height: 52px; object-fit: contain;
+  background: #fff; border-radius: 10px; padding: 6px;
+  box-shadow: 0 6px 18px var(--ring);
+}
+.ft__title{ margin: 0; font-weight: 800; font-size: 1.1rem; }
+.ft__tag{ margin: 2px 0 0; color: var(--ft-dim); font-size: .95rem; }
+
+.ft__about{ color: var(--ft-dim); line-height: 1.6; }
+
+.ft__socials{ display:flex; gap:10px; margin-top: 2px; }
+.ft__social{
+  width: 38px; height: 38px; display: grid; place-items:center;
+  color: #ffffff; background: rgba(255,255,255,.08);
+  border-radius: 10px; transition: background .2s ease, transform .2s ease;
+}
+.ft__social:hover{ background: rgba(96,165,250,.25); transform: translateY(-2px); }
+
+.ft__h4{ margin: 10px 0 4px; font-weight: 800; font-size: 1rem; }
+.ft__addr{ color: var(--ft-dim); line-height: 1.6; font-style: normal; }
+
+.ft__list, .ft__links{ list-style:none; margin:0; padding:0; display:grid; gap:6px; }
+.ft__list a, .ft__links a{
+  color: var(--ft-fg); text-decoration: none; opacity: .9;
+}
+.ft__list a:hover, .ft__links a:hover{ color: var(--ft-accent); }
+
+/* Map */
+.ft__mapWrap{
+  border-radius: 14px; overflow: hidden;
+  box-shadow: 0 8px 24px var(--ring);
+  background: rgba(255,255,255,.06);
+  aspect-ratio: 16/10;                 /* responsive */
+}
+.ft__map{ width: 100%; height: 100%; border: 0; display:block; }
+.ft__mapLink{
+  color: var(--ft-dim); text-decoration: none; margin-top: 8px; display:inline-block;
+}
+.ft__mapLink:hover{ color: var(--ft-accent); }
+
+/* Bottom bar */
+.ft__bar{
+  border-top: 1px solid rgba(255,255,255,.08);
+  padding: 14px 18px;
+  text-align: center;
+  color: var(--ft-dim);
+  font-size: .95rem;
+}
+
+/* remove accidental bottom scrollbars */
+html, body{ overflow-x: hidden; }

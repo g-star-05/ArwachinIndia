@@ -1,0 +1,177 @@
+:root{
+  --ink:#0f172a;
+  --muted:#475569;
+  --brand:#1e3a8a;
+  --orange:#f59e0b;
+  --card:#ffffff;
+  --ring:rgba(15,23,42,.1);
+}
+
+.tst{
+  padding: 80px 18px;
+  background: #ebf5ff 0%; /* soft neutral like your reference */
+  color: var(--ink);
+}
+
+.tst__head{
+  text-align:center;
+  margin: 0 auto 24px;
+  max-width: 900px;
+}
+.tst__title{
+  font-weight: 900;
+  letter-spacing: .06em;
+  font-size: clamp(1.8rem, 1rem + 3vw, 2.6rem);
+}
+.tst__sub{
+  color: var(--muted);
+}
+
+/* Horizontal scrolling rail */
+.tst__track{
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(280px, 1fr);
+  gap: 22px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: 16px;
+  padding: 12px 16px 18px;
+}
+.tst__track::-webkit-scrollbar{ height: 10px; }
+.tst__track::-webkit-scrollbar-thumb{ background:#cbd5e1; border-radius: 999px; }
+.tst__track::-webkit-scrollbar-track{ background:#e5e7eb; border-radius: 999px; }
+
+/* Card */
+.card{
+  position: relative;
+  scroll-snap-align: start;
+  background: var(--card);
+  border-radius: 18px;
+  box-shadow: 0 10px 26px var(--ring);
+  overflow: hidden;
+  display: grid;
+  align-content: start;
+  padding: 28px 18px 20px;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.card:hover{ transform: translateY(-4px); box-shadow: 0 16px 36px rgba(0,0,0,.12); }
+
+/* Hanger line + dot (decor like reference) */
+.card__hanger{
+  position: absolute; top: 0; left: 42px; width: 2px; height: 42px; background: #ddd;
+}
+.card__dot{
+  position: absolute; bottom: -6px; left: -4px; width: 12px; height: 12px; border-radius: 999px; background: #bbb;
+}
+
+/* Avatar circle */
+.card__avatarWrap{
+  position: relative;
+  width: 112px; height: 112px;
+  border-radius: 999px;
+  overflow: hidden;
+  margin: 0 auto 16px;
+  border: 6px solid #fff;
+  box-shadow: 0 6px 22px rgba(0,0,0,.15);
+}
+.card__avatar{
+  width: 100%; height: 100%; object-fit: cover;
+}
+
+/* Panel look (rounded inset) */
+/* keeps all testimonial cards equal height with scrollable text */
+.card__panel{
+  margin-top: 6px;
+  border: 3px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 18px 14px;
+  text-align: center;
+
+  display: grid;
+  grid-template-rows: auto auto auto 1fr; /* name, role, stars, text area */
+  max-height: 300px;                      /* adjust this height if needed */
+  overflow: hidden;
+}
+
+/* scroll only inside the testimonial text (no card resize) */
+.card__text{
+  font-size: .98rem;
+  line-height: 1.6;
+  color: inherit;
+  margin-bottom: 10px;
+
+  overflow-y: auto;            /* ✅ vertical scroll inside */
+  overflow-x: hidden;
+  max-height: 120px;           /* set visible message area */
+  padding-right: 4px;
+}
+
+/* nice scrollbar */
+.card__text::-webkit-scrollbar{ width: 6px; }
+.card__text::-webkit-scrollbar-thumb{
+  background: rgba(0,0,0,.2);
+  border-radius: 999px;
+}
+.card__text::-webkit-scrollbar-track{
+  background: transparent;
+}
+
+
+/* Variants like your image (dark & orange) */
+.card.dark .card__panel{
+  background: #2e2f34;
+  border-color: #d1d5db;
+  color: #fff;
+}
+.card.orange .card__panel{
+  background: #ffedd5;
+  border-color: #f59e0b;
+}
+
+/* Text + meta */
+.card__text{
+  font-size: .98rem;
+  line-height: 1.6;
+  color: inherit;
+  margin-bottom: 10px;
+}
+.card__name{
+  font-weight: 800;
+  margin-top: 2px;
+}
+.card__role{
+  font-size: .9rem;
+  color: #64748b;
+  margin-bottom: 8px;
+}
+.card.orange .card__role{ color: #a16207; }
+
+/* Stars */
+.card__stars{
+  margin-top: 6px;
+  color: #f59e0b;
+  display: inline-flex;
+  gap: 2px;
+}
+
+/* Arrows */
+.tst__arrows{
+  display:flex; gap:12px; justify-content:center; margin-top: 14px;
+}
+.tst__arrow{
+  width: 42px; height: 42px; border-radius: 999px; border: none;
+  background:#fff; box-shadow: 0 6px 22px rgba(0,0,0,.12);
+  font-size: 22px; font-weight: 800; color:#111827; cursor:pointer;
+  transition: transform .2s ease;
+}
+.tst__arrow:hover{ transform: scale(1.08); }
+.tst__arrow:disabled{ opacity:.35; cursor:not-allowed; }
+
+/* Responsive: show bigger cards on desktop */
+@media (min-width: 900px){
+  .tst__track{ grid-auto-columns: minmax(360px, 1fr); }
+}
+.card {
+  scroll-snap-align: center;  /* was start */
+}

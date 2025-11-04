@@ -1,0 +1,178 @@
+.life {
+  padding: 10px 18px;
+  background: linear-gradient(180deg, #f9fafb 0%, #e8ecf5 100%);
+  color: #0f172a;
+  position: relative;
+  overflow: hidden;
+  background: #2364AA;
+}
+
+.life__header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.life__title {
+  font-size: clamp(1.8rem, 2vw + 1rem, 2.6rem);
+  font-weight: 800;
+  color: #ffffff;
+  text-shadow: 0 0 12px rgba(30, 64, 175, 0.4);
+  margin-bottom: 5px;
+}
+
+.life__subtitle {
+  color: whitesmoke;
+  font-size: 1.05rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Scroll controls (left/right arrows) */
+.life__controls {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 18px;
+}
+
+.life__arrow {
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  font-size: 28px;
+  font-weight: 700;
+  color: #1e3a8a;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.life__arrow:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.2);
+}
+
+/* Scrollable container */
+.life__track {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  padding: 10px 10px 14px;
+  scroll-padding-inline: 10px;
+}
+
+.life__track::-webkit-scrollbar {
+  height: 10px;
+}
+.life__track::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 10px;
+}
+.life__track::-webkit-scrollbar-track {
+  background: #e2e8f0;
+  border-radius: 10px;
+}
+
+/* Card styles */
+.life__card {
+  flex: 0 0 340px;
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  scroll-snap-align: start;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.life__card:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+/* Big image */
+.life__img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover; /* ensures it fills completely */
+  display: block;
+}
+
+/* Text */
+.life__text {
+  padding: 14px 16px 18px;
+  font-size: 1rem;
+  color: #334155;
+  line-height: 1.5;
+  background: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .life__card {
+    flex: 0 0 80%;
+    height: auto;
+  }
+
+  .life__img {
+    height: 200px;
+  }
+}
+/* Make sure the card layout centers the image block */
+.life__card {
+  flex: 0 0 340px;
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  scroll-snap-align: start;
+  display: flex;                   /* ✅ allow centering */
+  flex-direction: column;
+  align-items: center;             /* ✅ horizontally center image */
+  justify-content: flex-start;     /* keep content stacked */
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.life__card:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+/* ✅ Center and contain the photo properly */
+.life__img {
+  width: 100%;
+  height: 280px;                  /* make image tall */
+  object-fit: cover;              /* ensures it fills width */
+  object-position: center center; /* ✅ centers the subject */
+  display: block;
+  border-bottom: 3px solid #1e3a8a; /* optional accent line under image */
+}
+
+/* ✅ Center text properly under image */
+.life__text {
+  padding: 16px;
+  font-size: 1rem;
+  color: #334155;
+  line-height: 1.5;
+  text-align: center;             /* ✅ centers paragraph text */
+  max-width: 90%;
+}
+/* ---------- Border under heading ---------- */
+.bottom-border {
+  display: inline-block;            /* makes the border only as wide as text */
+  border-bottom: 4px solid #f2f2f2; /* school blue color */
+  padding-bottom: 6px;              /* small spacing above border */
+  margin-bottom: 12px;
+  border-radius: 2px;
+}
+/* Horizontal line divider above section */
+.section-divider {
+  width: 90%;
+  height: 3px;
+  background: linear-gradient(90deg, #dadada, #f4f4f4);
+  border-radius: 2px;
+  margin: 40px auto 32px; /* top-bottom spacing */
+  opacity: 0.8;
+}

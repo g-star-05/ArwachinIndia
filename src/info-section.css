@@ -1,0 +1,103 @@
+.info {
+  background: #2364AA;
+  padding: 56px 18px;
+  position: relative;
+  overflow: hidden;
+}
+
+.info__wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  gap: 26px;
+}
+
+/* 🧱 Image container */
+.info__media {
+  order: 1;
+  position: relative;
+}
+
+/* 💫 Frame effect: lifted image look */
+.info__frame {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  transform: translateY(0);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+/* 🧊 Add a glowing edge behind the image */
+.info__frame::before {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #1e8a3b, #ffffff, #1e8a3b);
+  opacity: 0.3;
+  z-index: -1;
+}
+
+/* 🖼 Image style */
+.info__img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+/* 🪄 Hover = image “pops up” */
+.info__frame:hover {
+  transform: translateY(-12px); /* ✅ pops upward */
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.35);
+}
+.info__frame:hover .info__img {
+  transform: scale(1.08);
+}
+
+/* 🧾 Content section */
+.info__content {
+  order: 2;
+  display: grid;
+  gap: 14px;
+}
+.info__title {
+  font-weight: 800;
+  font-size: clamp(1.5rem, 1rem + 2vw, 2.25rem);
+  color: #ffffff;
+}
+.info__para {
+  color: #ffffff;
+}
+.info__list {
+  padding-left: 1.2rem;
+  color: #ffffff;
+}
+.info__cta {
+  margin-top: 12px;
+}
+.info__btn {
+  display: inline-block;
+  background: #1e8a3b;
+  color: white;
+  padding: 0.9rem 1.3rem;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: 0.3s ease;
+}
+.info__btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/* 📱 Responsive layout */
+@media (min-width: 840px) {
+  .info__wrap {
+    grid-template-columns: 1.1fr 1fr;
+    align-items: center;
+    gap: 36px;
+  }
+}
