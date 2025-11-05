@@ -87,8 +87,6 @@ export default function WelcomeModal({
                 <img key={idx} src={images[idx]} alt="" className="wm__img fade-in" />
                 {count > 1 && (
                   <>
-                    <button className="wm__nav left" onClick={prev} aria-label="Previous slide">‹</button>
-                    <button className="wm__nav right" onClick={next} aria-label="Next slide">›</button>
                     <div className="wm__dots" role="tablist" aria-label="Slides">
                       {images.map((_, i) => (
                         <button
