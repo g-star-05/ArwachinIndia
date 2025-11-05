@@ -80,7 +80,7 @@
 }
 /* Hide hero text & button on small screens */
 @media (max-width: 768px) {
-  .hero__content {
+  .hero__overlay {
     display: none;
   }
 }
