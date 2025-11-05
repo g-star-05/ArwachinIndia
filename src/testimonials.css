@@ -127,6 +127,7 @@
 .card.orange .card__panel{
   background: #ffedd5;
   border-color: #f59e0b;
+  color: black;
 }
 
 /* Text + meta */
