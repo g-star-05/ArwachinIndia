@@ -26,7 +26,7 @@
 
 .wm__dots{ position:absolute; left:0; right:0; bottom:10px; display:flex; gap:8px; justify-content:center; }
 .wm__dot{ width:8px; height:8px; border-radius:999px; border:0; background:rgba(255,255,255,.7); cursor:pointer; }
-.wm__dot.active{ background:#fff; width:22px; border-radius:999px; }
+.wm__dot.active{display: none;}
 
 .fade-in{ animation: fade .35s ease; }
 @keyframes fade{ from{ opacity:0 } to{ opacity:1 } }

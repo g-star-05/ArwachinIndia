@@ -87,17 +87,7 @@ export default function WelcomeModal({
                 <img key={idx} src={images[idx]} alt="" className="wm__img fade-in" />
                 {count > 1 && (
                   <>
-                    <div className="wm__dots" role="tablist" aria-label="Slides">
-                      {images.map((_, i) => (
-                        <button
-                          key={i}
-                          role="tab"
-                          aria-selected={i === idx}
-                          className={`wm__dot ${i === idx ? "active" : ""}`}
-                          onClick={() => setIdx(i)}
-                        />
-                      ))}
-                    </div>
+                    
                   </>
                 )}
               </>
