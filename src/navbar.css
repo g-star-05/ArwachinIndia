@@ -99,7 +99,7 @@ body { padding-top: var(--nav-h); overflow-x: hidden; }
   content: "";
   display: block;
   width: 24px; height: 2px;
-  background: #000;
+  background: white;
   position: relative;
   transition: 0.3s;
 }
