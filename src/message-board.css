@@ -9,8 +9,8 @@
 }
 
 .mb{
-  background: #2364AA;
-  padding: clamp(56px, 8vw, 96px) 18px;
+  background:linear-gradient(180deg, #1E3A8A 0%, #2563EB 100%);
+  padding: clamp(30px, 3vw, 96px) 10px;
   color: var(--mb-ink);
   overflow-x: clip;
 }

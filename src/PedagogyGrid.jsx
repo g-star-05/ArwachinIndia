@@ -10,38 +10,38 @@ import img5 from "./assets/ped5.jpg";
 const ITEMS = [
   {
     img: img1,
-    p1: "Concept-based teaching",
-    p2: "Strong fundamentals & clarity",
-    overlayTitle: "Foundational Mastery",
-    list: ["NCF-aligned planning", "Practice + feedback loops", "Continuous assessment"]
+    p1: "Neev",
+    p2: "Pre-primary",
+    overlayTitle: "A warm and nurturing environment where learning begins with joy and wonder.",
+    list: ["Play-based, activity oriented, and experiential learning", "Development of motor, language & social skills", "Lays the groundwork for cognitive and emotional development"]
   },
   {
     img: img2,
-    p1: "Activity & experiments",
-    p2: "Hands-on discovery",
-    overlayTitle: "Experiential Learning",
-    list: ["Lab & maker tasks", "Field projects", "Reflective journals"]
+    p1: "Aadhar",
+    p2: "Grade1-Grade5",
+    overlayTitle: "The fundamental stage that strengthens academic roots and moral values.",
+    list: ["Focus on literacy, Encourages creativity and curiosity", "Encourages creativity and curiosity", "Value-integrated learning for holistic development"]
   },
   {
     img: img3,
-    p1: "Language & expression",
-    p2: "Debates, MUN, theatre",
-    overlayTitle: "Communication Skills",
-    list: ["Reading programs", "Public speaking", "Creative writing"]
+    p1: "Aarambh",
+    p2: "Grade6-Grade8",
+    overlayTitle: "A transition phase where learners begin to explore, reason, and reflect.",
+    list: ["Emphasis on conceptual clarity and application", "Development of critical and analytical thinking", "Exploration of interests through clubs and projects"]
   },
   {
     img: img4,
-    p1: "STEAM integration",
-    p2: "Tech with creativity",
-    overlayTitle: "Future Readiness",
-    list: ["Coding & robotics", "Design thinking", "Digital citizenship"]
+    p1: "Sopan",
+    p2: "Grade9-Grade10",
+    overlayTitle: "Structured academic preparation with focus and clarity of purpose.",
+    list: ["Aligned with board curriculum and assessments", "Inculcation of discipline, time management, and focus", "Career awareness and early mentorship"]
   },
   {
     img: img5,
-    p1: "Values & wellness",
-    p2: "Sports & arts balance",
-    overlayTitle: "Whole-Child Growth",
-    list: ["Life skills & SEL", "Sports & arts", "Community service"]
+    p1: "Shikar",
+    p2: "Grade11-Grade12",
+    overlayTitle: "The final stage that prepares students for higher education and responsible adulthood",
+    list: ["Stream-specific academic rigor (Science, Commerce, Humanities)", "Personalised guidance for careers and competitive exams (SICP: School Integrated Competitive Programme)", "Guidance for leadership"]
   },
 ];
 

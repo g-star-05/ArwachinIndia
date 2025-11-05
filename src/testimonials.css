@@ -8,8 +8,8 @@
 }
 
 .tst{
-  padding: 80px 18px;
-  background: #ebf5ff 0%; /* soft neutral like your reference */
+  padding: 40px 18px;
+  background: linear-gradient(180deg, #97c4ff 0%, #d0e8ff 100%); /* soft neutral like your reference */
   color: var(--ink);
 }
 

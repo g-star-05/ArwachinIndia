@@ -4,7 +4,7 @@
   color: #0f172a;
   position: relative;
   overflow: hidden;
-  background: #2364AA;
+  background: linear-gradient(180deg, #2563EB 0%, #1E3A8A 100%);
 }
 
 .life__header {
@@ -162,7 +162,7 @@
 /* ---------- Border under heading ---------- */
 .bottom-border {
   display: inline-block;            /* makes the border only as wide as text */
-  border-bottom: 4px solid #f2f2f2; /* school blue color */
+  border-bottom: 4px solid #FACC15; /* school blue color */
   padding-bottom: 6px;              /* small spacing above border */
   margin-bottom: 12px;
   border-radius: 2px;
@@ -171,8 +171,8 @@
 .section-divider {
   width: 90%;
   height: 3px;
-  background: linear-gradient(90deg, #dadada, #f4f4f4);
+  background: #FACC15;
   border-radius: 2px;
   margin: 40px auto 32px; /* top-bottom spacing */
-  opacity: 0.8;
+  opacity: 1;
 }
