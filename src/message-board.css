@@ -9,7 +9,7 @@
 }
 
 .mb{
-  background:linear-gradient(180deg, #1E3A8A 0%, #2563EB 100%);
+  background:linear-gradient(135deg, #832c1d 0%, #F47A42 100%);
   padding: clamp(30px, 3vw, 96px) 10px;
   color: var(--mb-ink);
   overflow-x: clip;
@@ -19,7 +19,7 @@
 .mb__head{ text-align:center; max-width: 900px; margin: 0 auto 24px; }
 .mb__pill{
   display:inline-block; padding:6px 10px; font-weight:700; font-size:.8rem;
-  color:#fff; background: var(--mb-grad); border-radius:999px; box-shadow:0 6px 18px var(--mb-ring);
+  color:#fff; background: #F4C75B; border-radius:999px; box-shadow:0 6px 18px var(--mb-ring);
 }
 .mb__title{
   margin:10px 0 6px; font-weight:900;

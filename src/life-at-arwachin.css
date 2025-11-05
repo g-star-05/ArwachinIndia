@@ -10,7 +10,7 @@
 /* ---------- Section ---------- */
 .life{
   padding: 16px 18px 22px;
-  background: linear-gradient(180deg, var(--accent-2) 0%, var(--accent) 100%);
+  background: linear-gradient(180deg, #832c1d 0%, #F47A42 100%);
   color:#fff;
   position: relative;
   overflow: hidden; /* prevents any outside bleed */

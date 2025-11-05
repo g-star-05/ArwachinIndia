@@ -1,5 +1,5 @@
 .info {
-  background: linear-gradient(135deg, #1E3A8A 0%, #2563EB 100%);
+  background: linear-gradient(135deg, #832c1d 0%, #F4C75B 100%);
   padding: 56px 18px;
   position: relative;
   overflow: hidden;
@@ -76,14 +76,14 @@
   line-height: 1.3;
 }
 .info__para {
-  color: #E0E7FF;
+  color: whitesmoke;
 font-family: 'Inter', sans-serif;
 font-size: 1rem;
 line-height: 1.7;
 }
 .info__list {
   padding-left: 1.2rem;
-  color: #E0E7FF;
+  color: whitesmoke;
   font-family: 'Inter', sans-serif;
   font-size: 1rem;
   line-height: 1.7;
