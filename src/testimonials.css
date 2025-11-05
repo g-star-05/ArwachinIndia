@@ -10,7 +10,7 @@
 .tst{
   padding: 40px 18px;
   background: linear-gradient(180deg, #832C1D 0%, #FDFBF6 100%); /* soft neutral like your reference */
-  color: var(--ink);
+  color: white;
 }
 
 .tst__head{
@@ -24,7 +24,7 @@
   font-size: clamp(1.8rem, 1rem + 3vw, 2.6rem);
 }
 .tst__sub{
-  color: var(--muted);
+  color:whitesmoke;
 }
 
 /* Horizontal scrolling rail */

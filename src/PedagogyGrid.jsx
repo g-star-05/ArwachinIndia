@@ -1,49 +1,59 @@
 import { useState } from "react";
 import "./pedagogy-grid.css"; // We'll create this next
+import NeevImg from "./assets/neev.jpg";
+import PragatiImg from "./assets/pragati.jpg";
+import UdaanImg from "./assets/udaan.jpg";
+import UtkarshImg from "./assets/utkarsh.jpg";
+import NirnayImg from "./assets/nirnay.jpg";
+import RootIcon from "./assets/root.png";
+import SacralIcon from "./assets/sacral.png";
+import SolarIcon from "./assets/solar.png";
+import HeartIcon from "./assets/heart.png";
+import ThroatIcon from "./assets/throat.png";
 
 const pedagogyData = [
   {
     id: 1,
     title: "Neev",
     subtitle: "Pre-Primary",
-    image: "./assets/neev.jpg",
-    icon: "./assets/root.png",
+    image:NeevImg,
+    icon:RootIcon,
     description:
       "Grounding children in safety, values and curiosity, laying a stable base like the root chakra for lifelong learning.",
   },
   {
     id: 2,
-    title: "Pragati",
-    subtitle: "Primary",
-    image: "./assets/pragati.jpg",
-    icon: "./assets/sacral.png",
+    title: "Aadhar",
+    subtitle: "Grade1-Grade5",
+    image:PragatiImg,
+    icon:SacralIcon,
     description:
       "Encouraging creativity and imagination while strengthening the foundational academic and emotional skills of students.",
   },
   {
     id: 3,
-    title: "Udaan",
-    subtitle: "Middle School",
-    image: "./assets/udaan.jpg",
-    icon: "./assets/solar.png",
+    title: "Aarambh",
+    subtitle: "Grade6-Grade8",
+    image:UdaanImg,
+    icon:SolarIcon,
     description:
       "Fostering confidence, curiosity, and collaboration through project-based learning and explorative experiences.",
   },
   {
     id: 4,
-    title: "Utkarsh",
-    subtitle: "Secondary",
-    image: "./assets/utkarsh.jpg",
-    icon: "./assets/heart.png",
+    title: "Sopan",
+    subtitle: "Grade9-Grade10",
+    image:UtkarshImg,
+    icon:HeartIcon,
     description:
       "Helping students discover their potential, build discipline, and prepare for academic excellence and leadership.",
   },
   {
     id: 5,
-    title: "Nirnay",
-    subtitle: "Senior Secondary",
-    image: "./assets/nirnay.jpg",
-    icon: "./assets/throat.png",
+    title: "Shikhar",
+    subtitle: "Grade11-Grade12",
+    image:NirnayImg,
+    icon:ThroatIcon,
     description:
       "Empowering young minds to make informed decisions with focus, clarity, and a deep sense of responsibility.",
   },

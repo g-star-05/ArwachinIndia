@@ -15,7 +15,7 @@
 .wm__x{ border:0; background:transparent; cursor:pointer; font-size:20px; line-height:1; color:#111827; opacity:.85; padding:6px; border-radius:8px; }
 .wm__x:hover{ background:rgba(0,0,0,.06); }
 
-.wm__body{ overflow:auto; padding:clamp(10px,1.2vw,14px); }
+.wm__body{ overflow:hidden; padding:clamp(10px,1.2vw,14px); }
 .wm__frame{ position:relative; border-radius:12px; overflow:hidden; background:#f8fafc; box-shadow:0 10px 28px var(--wm-ring); }
 .wm__img{ display:block; width:100%; height:auto; }
 
