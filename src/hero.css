@@ -56,6 +56,15 @@
     0 0 12px rgba(173, 216, 230, 0.3);
   animation: subtitle-glow 4s ease-in-out infinite alternate;
 }
+.hero__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
 
 @keyframes subtitle-glow {
   0% {
@@ -67,5 +76,11 @@
     text-shadow: 
       0 0 8px rgba(255, 255, 255, 0.5),
       0 0 18px rgba(173, 216, 230, 0.6);
+  }
+}
+/* Hide hero text & button on small screens */
+@media (max-width: 768px) {
+  .hero__content {
+    display: none;
   }
 }
