@@ -135,3 +135,33 @@
     border-radius: 12px;
   }
 }
+
+.pedagogy-heading {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.pedagogy-heading span {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: whitesmoke;
+}
+
+.pedagogy-heading::after {
+  content: "";
+  display: block;
+  width: 500px;
+  height: 3px;
+  background-color:#F4C75B;
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+@media (max-width: 600px){
+  .pedagogy-heading::after{
+    width: 200PX;
+  }
+}
