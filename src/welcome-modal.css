@@ -7,7 +7,7 @@
 }
 
 .wm__overlay{ position:fixed; inset:0; z-index:1000; background:var(--wm-bg); backdrop-filter: blur(4px); display:grid; place-items:center; padding:20px; }
-.wm__dialog{ background:var(--wm-card); color:var(--wm-ink); width:min(100%, 920px); max-height:min(92vh, 980px); border-radius:16px; box-shadow:0 24px 80px rgba(0,0,0,.35), 0 0 0 1px var(--wm-ring); outline:none; display:grid; grid-template-rows:auto 1fr; overflow:hidden; animation:wm_in .22s ease; }
+.wm__dialog{ background:var(--wm-card); color:var(--wm-ink); width:min(100%, 920px); max-height:min(92vh, 980px); border-radius:16px; box-shadow:0 24px 80px rgba(0,0,0,.35), 0 0 0 1px var(--wm-ring); outline:none; display:grid; grid-template-rows:auto 1fr; overflow:auto; animation:wm_in .22s ease; }
 @keyframes wm_in{ from{ transform:translateY(10px) scale(.98); opacity:0; } to{ transform:none; opacity:1; } }
 
 .wm__head{ display:flex; align-items:center; justify-content:space-between; gap:10px; padding:14px 16px; border-bottom:1px solid rgba(0,0,0,.06); }
@@ -15,7 +15,7 @@
 .wm__x{ border:0; background:transparent; cursor:pointer; font-size:20px; line-height:1; color:#111827; opacity:.85; padding:6px; border-radius:8px; }
 .wm__x:hover{ background:rgba(0,0,0,.06); }
 
-.wm__body{ overflow:hidden; padding:clamp(10px,1.2vw,14px); }
+.wm__body{ overflow:auto; padding:clamp(10px,1.2vw,14px); }
 .wm__frame{ position:relative; border-radius:12px; overflow:hidden; background:#f8fafc; box-shadow:0 10px 28px var(--wm-ring); }
 .wm__img{ display:block; width:100%; height:auto; }
 
